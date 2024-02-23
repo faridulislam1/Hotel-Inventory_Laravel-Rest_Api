@@ -1,0 +1,705 @@
+{
+	"info": {
+		"_postman_id": "1695105c-4a59-4a8e-81af-6f86f80de710",
+		"name": "HotelData",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "31485345",
+		"_collection_link": "https://orange-firefly-888395.postman.co/workspace/Air_Api~9f99bf9f-d8b4-4343-b6dd-4db49921abbb/collection/31485345-1695105c-4a59-4a8e-81af-6f86f80de710?action=share&source=collection_link&creator=31485345"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "a",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "farid",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "farid@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						}
+					]
+				},
+				"url": "https://hotel.aotrek.net/api/auth/login"
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "farid",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "farid@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						}
+					]
+				},
+				"url": "https://hotel.aotrek.net/api/auth/register"
+			},
+			"response": []
+		},
+		{
+			"name": "search",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{token}}"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/ecmascript",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://hotel.aotrek.net/api/auth/search/?query=seraton",
+					"protocol": "https",
+					"host": [
+						"hotel",
+						"aotrek",
+						"net"
+					],
+					"path": [
+						"api",
+						"auth",
+						"search",
+						""
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "seraton"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show_single_data",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{token}}"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": "https://hotel.aotrek.net/api/auth/show/12"
+			},
+			"response": []
+		},
+		{
+			"name": "All-data",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{token}}"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": "https://hotel.aotrek.net/api/auth/manage-product"
+			},
+			"response": []
+		},
+		{
+			"name": "hotel_data",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{token}}"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "country",
+							"value": "India",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "kalkata",
+							"type": "text"
+						},
+						{
+							"key": "hotel",
+							"value": "pakija",
+							"type": "text"
+						},
+						{
+							"key": "embed_code",
+							"value": "s344",
+							"type": "text"
+						},
+						{
+							"key": "landmark",
+							"value": "good",
+							"type": "text"
+						},
+						{
+							"key": "rating",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "multiple_image[]",
+							"type": "file",
+							"src": [
+								"/D:/download/images (1).png",
+								"/D:/download/images - Copy.jpeg",
+								"/D:/download/images (1).jpeg"
+							]
+						},
+						{
+							"key": "address",
+							"value": "hongkong",
+							"type": "text"
+						},
+						{
+							"key": "highlights",
+							"value": "good",
+							"type": "text"
+						},
+						{
+							"key": "long_decription",
+							"value": "good",
+							"type": "text"
+						},
+						{
+							"key": "currency",
+							"value": "bdt",
+							"type": "text"
+						},
+						{
+							"key": "term_condition",
+							"value": "nice",
+							"type": "text"
+						},
+						{
+							"key": "longitude",
+							"value": "good",
+							"type": "text"
+						},
+						{
+							"key": "litetitude",
+							"value": "goods",
+							"type": "text"
+						},
+						{
+							"key": "facilities",
+							"value": "Swimming ,Parking,Airport ",
+							"type": "text"
+						},
+						{
+							"key": "Single_image",
+							"type": "file",
+							"src": "/D:/download/images.jpeg"
+						}
+					]
+				},
+				"url": "https://hotel.aotrek.net/api/auth/new-hotel"
+			},
+			"response": []
+		},
+		{
+			"name": "room_data",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{token}}"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "room_num",
+							"value": "pakija hotel",
+							"type": "text"
+						},
+						{
+							"key": "available_capacity",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "max_capacity",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "refundable",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "non_refundable",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "refundable_break",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "refundable_nonbreak",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "extra_bed",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "room_size",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "bed_type",
+							"value": "air,city,wif",
+							"type": "text"
+						},
+						{
+							"key": "cancellation_policy",
+							"value": "dfgf",
+							"type": "text"
+						},
+						{
+							"key": "room_available",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "room_facilities",
+							"value": "air,city",
+							"type": "text"
+						},
+						{
+							"key": "city_id",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "hotel_id",
+							"value": "10",
+							"type": "text"
+						}
+					]
+				},
+				"url": "https://hotel.aotrek.net/api/auth/new-itenary"
+			},
+			"response": []
+		},
+		{
+			"name": "all-room _data",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{token}}"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": "https://hotel.aotrek.net/api/auth/manage-itenary"
+			},
+			"response": []
+		},
+		{
+			"name": "show-single-room",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{token}}"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": "https://hotel.aotrek.net/api/auth/showroom/23"
+			},
+			"response": []
+		},
+		{
+			"name": "passenger",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{token}}"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "AddressLine",
+							"value": "Mirpur",
+							"type": "text"
+						},
+						{
+							"key": "CityName",
+							"value": "saver",
+							"type": "text"
+						},
+						{
+							"key": "CountryCode",
+							"value": "bd12",
+							"type": "text"
+						},
+						{
+							"key": "PostalCode",
+							"value": "4565",
+							"type": "text"
+						},
+						{
+							"key": "StreetNmbr",
+							"value": "56356",
+							"type": "text"
+						},
+						{
+							"key": "NameNumber",
+							"value": "456",
+							"type": "text"
+						},
+						{
+							"key": "Phone",
+							"value": "435",
+							"type": "text"
+						},
+						{
+							"key": "CountryCode",
+							"value": "435",
+							"type": "text"
+						},
+						{
+							"key": "PhoneUseType",
+							"value": "345",
+							"type": "text"
+						},
+						{
+							"key": "StateCode",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": "https://hotel.aotrek.net/api/auth/create-passenger"
+			},
+			"response": []
+		},
+		{
+			"name": "multi",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{token}}"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": "https://hotel.aotrek.net/api/auth/index"
+			},
+			"response": []
+		},
+		{
+			"name": "show passenger",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{token}}"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": "https://hotel.aotrek.net/api/auth/manage-passenger"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete_room",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{token}}"
+					}
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": "https://hotel.aotrek.net/api/auth/delete_room/5"
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "update_room",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{token}}"
+					}
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "room_num",
+							"value": "dfsf",
+							"type": "text"
+						},
+						{
+							"key": "available_capacity",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "max_capacity",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "refundable",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "non_refundable",
+							"value": "d2",
+							"type": "text"
+						},
+						{
+							"key": "refundable_break",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "refundable_nonbreak",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "room_size",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "cancellation_policy",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "room_available",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "extra_bed",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "room_facilities",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "bed_type",
+							"value": "dsf",
+							"type": "text"
+						},
+						{
+							"key": "hotel_id",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": "https://hotel.aotrek.net/api/auth/update"
+			},
+			"response": []
+		}
+	]
+}
