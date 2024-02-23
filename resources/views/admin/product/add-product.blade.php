@@ -26,7 +26,7 @@
                     <div id="step1" class="card shadow-lg border-0 rounded-lg mt-5">
                         <!-- ... (your form fields for step 1) ... -->
                         <div class="card-header bg-primary">
-                            <h3 class="text-center font-weight-light my-2">Hotel system sdgfdgdf</h3>
+                            <h3 class="text-center font-weight-light my-2">Hotel system </h3>
                             {{session('message')}}
                         </div>
 
@@ -39,7 +39,7 @@
                                     <div class="row">
                                         <div class="col-md-6"><br>
                                             <input class="form-control" type="text" name="country"
-                                                placeholder="Enter country asdnbcsjkfbsl">
+                                                placeholder="Enter country">
                                              @error('country')
                                           <div class="text-danger">{{ $message }}</div>
                                             @enderror
