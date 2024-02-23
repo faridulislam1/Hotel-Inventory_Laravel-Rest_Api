@@ -46,7 +46,7 @@
                                          </div>
                                         
                                         <div class="col-md-6"><br>
-                                            <input class="form-control" type="text" name="city" placeholder="Enter citybjbjkbkj">
+                                            <input class="form-control" type="text" name="city" placeholder="Enter city">
                                             @error('city')
                                           <div class="text-danger">{{ $message }}</div>
                                             @enderror 
@@ -61,7 +61,7 @@
 
                                         <div class="col-md-6"><br>
                                             <input class="form-control" type="text" name="embed_code"
-                                                placeholder="Enter hotel Embed codevjkbkjbkjbk">
+                                                placeholder="Enter hotel Embed code">
                                                 @error('embed_code')
                                           <div class="text-danger">{{ $message }}</div>
                                             @enderror 
